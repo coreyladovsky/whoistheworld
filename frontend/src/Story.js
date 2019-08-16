@@ -10,7 +10,7 @@ function Story() {
   function handleSubmit(e) {
       e.preventDefault();
       try {
-          axios.post("/stories", {story: text})
+          axios.post("/stories", {story: text, title: ""})
       } catch (err) {
           setErr(err)
       }
