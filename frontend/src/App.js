@@ -8,8 +8,8 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <Route path="/" component={Stories} />
         <Route path="/new" component={Story} />
+        <Route path="/" component={Stories} />
       </div>
     </BrowserRouter>
   );
