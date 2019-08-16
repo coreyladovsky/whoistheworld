@@ -31,4 +31,19 @@ const getStories = (req, res, next) => {
     .catch(err => next(err))
 }
 
-module.exports = { createStory, getStories}
+const getRandomStory = (req, res, next) => {
+  db.one("SELECT * FROM stories ORDER BY RANDOM() LIMIT 1")
+  .then(story => {
+    res.json({
+      story, 
+      status: "success",
+      message: "RECEIVED ONE RANDOM STORY"
+    })
+  })
+  .catch(err => {
+    console.log(err);
+    return next(err)
+  })
+}
+
+module.exports = { createStory, getStories, getRandomStory}
