@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { log } from "util";
 
 function Stories() {
   const [storiesViewed, setStoriesViewed] = useState([]);
@@ -10,13 +9,13 @@ function Stories() {
     getRandomStory();
   }, [])
 
-  function getRandomStory() {
-    axios
-      .get("/stories/randomStory")
-      .then(res => {
-        setCurrStory(res.data.story);
-      })
-      .catch(err => console.log(err));
+  async function getRandomStory() {
+      try {
+          let res = await axios.get("/stories/randomStory")
+          setCurrStory(res.data.story);
+      } catch(err){
+          console.log(err)
+      };
   }
 
   function nextStory() {
