@@ -2,5 +2,59 @@
 
 .storiesContainer {
     background: #ffc305;
+    font-family: sans-serif;
     height: 100%;
+    padding-top: 10%;
 }
+
+.storiesContainer h1 {
+    background: white;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 15px;
+    font-size: 35px;
+    border-radius: 5px;
+    padding: 20px;
+    color: #581845;
+    font-weight: bold;
+}
+
+.storiesContainer p {
+    background: white;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    font-size: 30px;
+    max-height: 60%;
+    overflow-y: scroll;
+    border-radius: 5px;
+
+}
+
+.storyDate {
+    color: gray;
+    font-size: 16px;
+    text-align: right;
+}
+
+.storyButtons {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin-top: 3%;
+}
+
+.storyButtons button {
+    font-size: 25px;
+    border: 1px solid #581845;
+    color: white;
+    background: #900c3f;
+    width: 45%;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+
+}
+

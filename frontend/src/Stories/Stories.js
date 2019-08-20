@@ -40,9 +40,16 @@ function Stories() {
 
   return (
     <div className="storiesContainer">
-      {moment(currStory.created_at).format("MM/DD/YYYY")}{" "}
       <h1>{currStory.title}</h1>
-      <p>{currStory.story}</p>
+      <p>
+      <div className="storyDate">
+        {moment(currStory.created_at).format("MM/DD/YYYY")} 
+
+      </div>
+        {currStory.story}
+      </p>
+      <div className="storyButtons">
+
       <button
         disabled={storiesViewed.length ? false : true}
         onClick={previousStory}
@@ -50,6 +57,7 @@ function Stories() {
         Previous
       </button>
       <button onClick={nextStory}>Next</button>
+      </div>
     </div>
   );
 }
