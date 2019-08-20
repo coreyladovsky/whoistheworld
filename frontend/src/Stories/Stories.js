@@ -51,6 +51,7 @@ function Stories() {
       <div className="storyButtons">
 
       <button
+        className={storiesViewed.length ? 'regular' : 'disable'}
         disabled={storiesViewed.length ? false : true}
         onClick={previousStory}
       >

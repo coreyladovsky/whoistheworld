@@ -18,6 +18,8 @@
     padding: 20px;
     color: #581845;
     font-weight: bold;
+    max-height: 10%;
+    overflow-y: scroll;
 }
 
 .storiesContainer p {
@@ -56,5 +58,9 @@
     padding: 10px;
     margin: 10px;
 
+}
+
+.disable {
+    opacity: .5;
 }
 
