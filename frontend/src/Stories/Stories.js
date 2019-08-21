@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import moment from "moment";
-import "./Stories.css"
+import "./Stories.css";
 
-function Stories() {
+function Stories(props) {
   const [storiesViewed, setStoriesViewed] = useState([]);
   const [futureStories, setFutureStories] = useState([]);
   const [currStory, setCurrStory] = useState({});
@@ -41,23 +41,26 @@ function Stories() {
   return (
     <div className="storiesContainer">
       <h1>{currStory.title}</h1>
-      <p>
-      <div className="storyDate">
-        {moment(currStory.created_at).format("MM/DD/YYYY")} 
-
-      </div>
+      <div className="storyInfo">
+        <div className="storyDate">
+          {moment(currStory.created_at).format("MM/DD/YYYY")}
+        </div>
         {currStory.story}
-      </p>
+      </div>
       <div className="storyButtons">
-
-      <button
-        className={storiesViewed.length ? 'regular' : 'disable'}
-        disabled={storiesViewed.length ? false : true}
-        onClick={previousStory}
-      >
-        Previous
-      </button>
-      <button onClick={nextStory}>Next</button>
+        <button
+          className={storiesViewed.length ? "regular" : "disable"}
+          disabled={storiesViewed.length ? false : true}
+          onClick={previousStory}
+        >
+          Previous
+        </button>
+        <button onClick={nextStory}>Next</button>
+      </div>
+      <div className="addYourStory">
+        <button onClick={() => props.history.push("/new")}>
+          Add Your Story
+        </button>
       </div>
     </div>
   );

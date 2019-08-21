@@ -6,8 +6,10 @@ CREATE DATABASE whoistheworld;
 CREATE TABLE stories
 (
     id SERIAL PRIMARY KEY,
-    title VARCHAR,
+    title VARCHAR, 
     story VARCHAR,
     created_at TIMESTAMP
     WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
+
+-- ###TODO Set title to 36 characters

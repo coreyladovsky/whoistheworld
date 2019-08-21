@@ -7,8 +7,8 @@ import "./App.css";
 function App() {
   return (
     <BrowserRouter>
-        <Route path="/new" component={Story} />
-        <Route path="/" component={Stories} />
+        <Route exact path="/new" component={Story} />
+        <Route exact path="/" component={Stories} />
     </BrowserRouter>
   );
 }
