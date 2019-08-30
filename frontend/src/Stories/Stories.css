@@ -43,6 +43,10 @@ body {
   text-align: right;
 }
 
+.storyButtons button {
+  display: none;
+}
+
 .storyButtons {
   margin: auto;
   display: flex;
@@ -95,7 +99,12 @@ body {
   /* .storiesContainer h1 {
     line-height: 1.5;
   } */
+  .storiesContainer {
+      background: black;
+  }
+
   body {
-      background: "black";
+       background: #581845;
+
   }
 }
